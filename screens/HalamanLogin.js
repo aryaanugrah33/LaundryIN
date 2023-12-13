@@ -9,34 +9,39 @@ const HalamanLogin = () => {
 
   return (
     <View style={styles.halamanLogin}>
-      <Pressable style={styles.password} onPress={() => navigation.goBack()}>
+      <Pressable style={styles.password}  onPress={() => navigation.navigate("Home")}>
         <Text style={styles.logIn}>Log in</Text>
       </Pressable>
       <Input
         style={[styles.email, styles.emailFlexBox]}
-        label="email"
+        placeholder="E-mail"
         required={false}
         leftIcon={{ name: "account", type: "material-community" }}
-        inputStyle={{ color: "#838383" }}
+        inputStyle={{ color: "#000" }}
         containerStyle={styles.emailTextInputInput}
       />
       <Input
         style={[styles.password1, styles.emailFlexBox]}
-        
+        placeholder="password"
+        secureTextEntry
         leftIcon={{ name: "lock", type: "material-community" }}
-        inputStyle={{ color: "#838383" }}
+        inputStyle={{ color: "#000" }}
         containerStyle={styles.passwordTextInputInput}
       />
-      <Text style={styles.helloAgainWelcomeBack}>Hello Again!</Text>
-      <Text style={styles.helloAgainWelcomeBack1}>WelcomeBack</Text>
+      <Text style={[styles.helloAgain, styles.helloAgainTypo]}>
+        Hello Again!
+      </Text>
+      <Text style={[styles.welcomeBack, styles.helloAgainTypo]}>
+        WelcomeBack
+      </Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   emailTextInputInput: {
-    left: 31,
-    width: 293,
+    left: 32,
+    width: 336,
     height: 54,
     top: 400,
     position: "absolute",
@@ -45,7 +50,7 @@ const styles = StyleSheet.create({
     left: 32,
     paddingTop: 7,
     paddingBottom: 12,
-    width: 293,
+    width: 336,
     height: 54,
     top: 476,
     position: "absolute",
@@ -55,6 +60,14 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhite,
     borderRadius: Border.br_11xl,
     overflow: "hidden",
+  },
+  helloAgainTypo: {
+    textAlign: "left",
+    color: Color.colorWhite,
+    fontFamily: FontFamily.poppinsExtraBold,
+    fontWeight: "800",
+    fontSize: FontSize.size_21xl,
+    position: "absolute",
   },
   logIn: {
     fontSize: 20,
@@ -67,7 +80,7 @@ const styles = StyleSheet.create({
   },
   password: {
     top: 671,
-    left: 64,
+    left: 90,
     width: 231,
     height: 54,
     justifyContent: "center",
@@ -85,33 +98,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     alignItems: "center",
   },
-  helloAgainWelcomeBack: {
-    marginLeft: -146,
+  helloAgain: {
+    marginLeft: -145.5,
     top: 79,
     left: "50%",
-    fontSize: FontSize.size_21xl,
-    fontWeight: "800",
-    fontFamily: FontFamily.poppinsExtraBold,
-    color: Color.colorWhite,
-    textAlign: "left",
-    position: "absolute",
+    width: 285,
+    height: 51,
   },
-  helloAgainWelcomeBack1: {
-    marginLeft: -146,
-    top: 120,
-    left: "50%",
-    fontSize: FontSize.size_21xl,
-    fontWeight: "800",
-    fontFamily: FontFamily.poppinsExtraBold,
-    color: Color.colorWhite,
-    textAlign: "left",
-    position: "absolute",
+  welcomeBack: {
+    top: 140,
+    left: 60,
+    width: 321,
+    height: 120,
   },
   halamanLogin: {
     backgroundColor: Color.colorDarkblue,
     flex: 1,
     width: "100%",
-    height: 800,
+    height: 868,
     overflow: "hidden",
   },
 });

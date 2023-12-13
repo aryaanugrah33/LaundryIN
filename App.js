@@ -1,12 +1,13 @@
-const Stack = createNativeStackNavigator();
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HalamanUtama from "./screens/HalamanUtama";
 import HalamanLogin from "./screens/HalamanLogin";
+import Home from "./screens/Home"; // Corrected import
+import Cuci from "./screens/Cuci"; // Corrected import
 
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { View, Text, Pressable, TouchableOpacity } from "react-native";
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   const [hideSplashScreen, setHideSplashScreen] = React.useState(true);
@@ -21,27 +22,36 @@ const App = () => {
   }
 
   return (
-    <>
-      <NavigationContainer>
-        {hideSplashScreen ? (
-          <Stack.Navigator
-            initialRouteName="HalamanUtama"
-            screenOptions={{ headerShown: false }}
-          >
-            <Stack.Screen
-              name="HalamanUtama"
-              component={HalamanUtama}
-              options={{ headerShown: false }}
-            />
-            <Stack.Screen
-              name="HalamanLogin"
-              component={HalamanLogin}
-              options={{ headerShown: false }}
-            />
-          </Stack.Navigator>
-        ) : null}
-      </NavigationContainer>
-    </>
+    <NavigationContainer>
+      {hideSplashScreen ? (
+        <Stack.Navigator
+          initialRouteName="HalamanUtama"
+          screenOptions={{ headerShown: false }}
+        >
+          <Stack.Screen
+            name="HalamanUtama"
+            component={HalamanUtama}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="HalamanLogin"
+            component={HalamanLogin}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Cuci"
+            component={Cuci}
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      ) : null}
+    </NavigationContainer>
   );
 };
+
 export default App;
