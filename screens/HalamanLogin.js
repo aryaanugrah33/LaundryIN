@@ -35,7 +35,7 @@ const HalamanLogin = () => {
 
 const styles = StyleSheet.create({
   emailTextInputInput: {
-    left: 32,
+    left: 31,
     width: 293,
     height: 54,
     top: 400,
