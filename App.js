@@ -6,6 +6,7 @@ import HalamanUtama from "./screens/HalamanUtama";
 import HalamanLogin from "./screens/HalamanLogin";
 import Home from "./screens/Home"; // Corrected import
 import Cuci from "./screens/Cuci"; // Corrected import
+import Admin from "./screens/Admin"; // Corrected import
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +42,11 @@ const App = () => {
           <Stack.Screen
             name="Home"
             component={Home}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="Admin"
+            component={Admin}
             options={{ headerShown: false }}
           />
           <Stack.Screen

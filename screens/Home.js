@@ -14,6 +14,7 @@ class Home extends Component {
                 { namaJasa: 'cuci', deskripsi: 'Layanan Cuci Plus Plus', icon: 'rocket', route: 'Cuci' },
                 { namaJasa: 'setrika', deskripsi: 'Layanan Strika Plus Plus', icon: 'shirt', route: '' },
                 { namaJasa: 'cuci sepatu', deskripsi: 'Layanan Cuci Sepatu Plus Plus', icon: 'ios-american-football', route: '' },
+                { namaJasa: 'admin', deskripsi: 'Admin Laundry', icon: 'shirt', route: 'Admin' },
             ]
         };
     }
@@ -39,6 +40,7 @@ class Home extends Component {
                         <TouchableOpacity
                             style={{
                                 paddingVertical: 20,
+                                height: 200,
                                 paddingHorizontal: 10,
                                 backgroundColor: '#29B6F6',
                                 justifyContent: 'center',
