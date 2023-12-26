@@ -3,7 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Icon } from "react-native-elements";
 import Home from "./screens/Home";
 import Admin from "./screens/Admin";
-import History from "./screens/History";
+// import History from "./screens/History";
 import Profil from "./screens/Profil";
 
 const Tab = createBottomTabNavigator();
@@ -36,7 +36,7 @@ const BottomTabNavigator = () => {
           ),
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="History"
         component={History}
         options={{
@@ -45,7 +45,7 @@ const BottomTabNavigator = () => {
             <Icon name="history" type="material" color={color} size={size} />
           ),
         }}
-      />
+      /> */}
       <Tab.Screen
         name="Profil"
         component={Profil}

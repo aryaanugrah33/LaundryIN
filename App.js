@@ -5,7 +5,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import BottomTabNavigator from "./BottomTabNavigator";
 import HalamanUtama from "./screens/HalamanUtama";  // Gantilah dengan nama file dan path yang sesuai
 import HalamanLogin from "./screens/HalamanLogin";  // Gantilah dengan nama file dan path yang sesuai
-import Home from "./screens/Home";
 import Cuci from "./screens/Cuci";
 import Setrika from "./screens/Setrika";
 import CuciSepatu from "./screens/CuciSepatu";

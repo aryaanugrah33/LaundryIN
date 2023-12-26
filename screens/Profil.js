@@ -6,7 +6,7 @@ import { Color, FontFamily, FontSize, Border } from "../GlobalStyles";
 const ProfilPage = () => {
   const navigation = useNavigation();
 
-  const [nama, setNama] = useState("John Doe"); // Nama awal
+  const [nama, setNama] = useState("Raffel Toji"); // Nama awal
   const [cabang, setCabang] = useState("Cabang 6, Wonokromo, Surabaya"); // Cabang awal
   const [fotoProfil, setFotoProfil] = useState(
     require("../assets/default-profile-picture.jpg") // Foto profil awal
