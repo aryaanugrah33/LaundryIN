@@ -2,11 +2,13 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HalamanUtama from "./screens/HalamanUtama";
-import HalamanLogin from "./screens/HalamanLogin";
-import Home from "./screens/Home"; // Corrected import
-import Cuci from "./screens/Cuci"; // Corrected import
-import Admin from "./screens/Admin"; // Corrected import
+import BottomTabNavigator from "./BottomTabNavigator";
+import HalamanUtama from "./screens/HalamanUtama";  // Gantilah dengan nama file dan path yang sesuai
+import HalamanLogin from "./screens/HalamanLogin";  // Gantilah dengan nama file dan path yang sesuai
+import Home from "./screens/Home";
+import Cuci from "./screens/Cuci";
+import Setrika from "./screens/Setrika";
+import CuciSepatu from "./screens/CuciSepatu";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,31 +31,12 @@ const App = () => {
           initialRouteName="HalamanUtama"
           screenOptions={{ headerShown: false }}
         >
-          <Stack.Screen
-            name="HalamanUtama"
-            component={HalamanUtama}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="HalamanLogin"
-            component={HalamanLogin}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Home"
-            component={Home}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Admin"
-            component={Admin}
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="Cuci"
-            component={Cuci}
-            options={{ headerShown: false }}
-          />
+          <Stack.Screen name="HalamanUtama" component={HalamanUtama} />
+          <Stack.Screen name="HalamanLogin" component={HalamanLogin} />
+          <Stack.Screen name="Cuci" component={Cuci} />
+          <Stack.Screen name="Setrika" component={Setrika} />
+          <Stack.Screen name="CuciSepatu" component={CuciSepatu} />
+          <Stack.Screen name="Home" component={BottomTabNavigator} />
         </Stack.Navigator>
       ) : null}
     </NavigationContainer>
