@@ -33,14 +33,14 @@ class Admin extends Component {
         }
     };
 
-    // handleEdit = () => {
-    //     // Implementasi logika untuk proses edit data
-    //     // Misalnya, membuka halaman edit dengan data terpilih
-    //     // atau menampilkan modal edit
-    //     console.log('Edit data dengan index:', this.state.selectedItemIndex);
-    //     // Contoh: Navigasi ke halaman edit dengan menggunakan react-navigation
-    //     // this.props.navigation.navigate('EditScreen', { index: this.state.selectedItemIndex });
-    // };
+    handleEdit = () => {
+        // Implementasi logika untuk proses edit data
+        // Misalnya, membuka halaman edit dengan data terpilih
+        // atau menampilkan modal edit
+        console.log('Edit data dengan index:', this.state.selectedItemIndex);
+        // Contoh: Navigasi ke halaman edit dengan menggunakan react-navigation
+        // this.props.navigation.navigate('EditScreen', { index: this.state.selectedItemIndex });
+    };
 
     handleDelete = () => {
         // Implementasi logika untuk proses delete data
@@ -118,9 +118,7 @@ class Admin extends Component {
                             </Text>
                             <Text style={{ color: '#FFFFFF' }}>{item.alamat}</Text>
                             <View style={{ flexDirection: 'row', marginTop: 5 }}>
-                                {/* <TouchableOpacity onPress={this.handleEdit} style={{ marginRight: 10 }}>
-                                    <Ionicons name="create" size={20} color="#FFFFFF" />
-                                </TouchableOpacity> */}
+                              
                                 <TouchableOpacity onPress={this.handleDelete}>
                                     <Ionicons name="trash" size={20} color="#FFFFFF" />
                                 </TouchableOpacity>
@@ -134,7 +132,7 @@ class Admin extends Component {
                         <View style={{ flex: 1 }}>
                             <FlatGrid
                                 itemDimension={130}
-                                data={this.state.transaksi[this.state.selectedItemIndex].cart}
+                                data={this.state.transaksi[this.state.selectedItemIndex]?.cart || []}
                                 renderItem={({ item, index }) => (
 
                                     <TouchableOpacity style={{ backgroundColor: '#03a9f4', borderRadius: 6, elevation: 3, justifyContent: 'center', alignItems: 'center', paddingVertical: 20, }}
